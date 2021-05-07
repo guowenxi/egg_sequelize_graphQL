@@ -1,0 +1,10 @@
+https://www.sequelize.com.cn/core-concepts/paranoid
+
+class Post extends Model {}
+Post.init({ /* 这是属性 */ }, {
+  sequelize,
+  paranoid: true,
+
+  // 如果要为 deletedAt 列指定自定义名称
+  deletedAt: 'destroyTime'
+});
